@@ -15,4 +15,4 @@ Pipeline Steps:
 4. Use Redshift COPY command to load data into data warehouse
 5. Automate with Airflow DAG
 
-This project demonstrates cloud-first data engineering patterns used in production.
+
