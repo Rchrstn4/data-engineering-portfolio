@@ -1,5 +1,3 @@
-# AWS ETL Pipeline (S3 → Glue → Redshift → Airflow)
-
 This project demonstrates an end-to-end data engineering ETL pipeline using:
 
 - Python
