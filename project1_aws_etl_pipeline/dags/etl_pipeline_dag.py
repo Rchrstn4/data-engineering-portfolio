@@ -29,7 +29,7 @@ with DAG(
         sql="""
         COPY public.customers
         FROM 's3://demo-etl-pipeline-bucket/clean/customers/'
-        IAM_ROLE 'arn:aws:iam::111122223333:role/RedshiftS3AccessRoleDemo'
+        IAM_ROLE 'arn:aws:iam::113570284336:role/RedshiftS3AccessRoleDemo'
         FORMAT AS PARQUET;
         """,
         redshift_conn_id="redshift_default"
