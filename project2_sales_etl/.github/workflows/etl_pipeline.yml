@@ -1,4 +1,4 @@
-name: Simple ETL Pipeline
+name: Sales ETL Pipeline
 
 on:
   push:
