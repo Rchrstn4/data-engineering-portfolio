@@ -1,11 +1,27 @@
-import sqlite3
-import pandas as pd
+from extract import extract_sales_data
+from transform import transform_sales_data
+from load import load_to_sqlite
 
 
-def load_to_sqlite(df: pd.DataFrame, db_path: str, table_name: str) -> None:
-    """Load transformed data into SQLite."""
-    conn = sqlite3.connect(db_path)
-    try:
-        df.to_sql(table_name, conn, if_exists="replace", index=False)
-    finally:
-        conn.close()
+RAW_FILE = "data/raw_sales.csv"
+DB_PATH = "output/etl_demo.db"
+TABLE_NAME = "daily_sales_summary"
+
+
+def run_etl() -> None:
+    print("Starting ETL process...")
+
+    raw_df = extract_sales_data(RAW_FILE)
+    print(f"Extracted {len(raw_df)} rows.")
+
+    transformed_df = transform_sales_data(raw_df)
+    print(f"Transformed into {len(transformed_df)} summary rows.")
+
+    load_to_sqlite(transformed_df, DB_PATH, TABLE_NAME)
+    print(f"Loaded data into {DB_PATH}, table: {TABLE_NAME}")
+
+    print("ETL process completed successfully.")
+
+
+if __name__ == "__main__":
+    run_etl()
