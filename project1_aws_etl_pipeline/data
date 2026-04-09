@@ -1,0 +1,11 @@
+customer_id,first_name,last_name,email,signup_date,country,status
+C001,John,Doe,john.doe@email.com,2022-03-15,USA,active
+C002,Jane,Smith,jane.smith@email.com,2021-07-22,USA,active
+C003,Michael,Johnson,michael.j@email.com,2020-11-05,Canada,inactive
+C004,Emily,Davis,emily.davis@email.com,2023-01-10,UK,active
+C005,Chris,Brown,chris.brown@email.com,2022-09-30,USA,active
+C006,Sarah,Wilson,sarah.w@email.com,2021-12-12,Australia,inactive
+C007,David,Martinez,david.m@email.com,2020-06-18,USA,active
+C008,Laura,Garcia,laura.g@email.com,2023-04-01,Mexico,active
+C009,James,Anderson,james.a@email.com,2022-08-25,USA,inactive
+C010,Olivia,Thomas,olivia.t@email.com,2021-02-14,Canada,active
